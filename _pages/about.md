@@ -18,7 +18,6 @@ Education
   [<span style="color: orangered;">the University of Sydney</span>](https://www.sydney.edu.au/), Sydney, AU
   
 * **B.S. in Computer Science**
-  
   [<span style="color: orangered;">the University of Sydney</span>](https://www.sydney.edu.au/), Sydney, AU
 
 A data-driven personal website
