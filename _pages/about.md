@@ -13,18 +13,12 @@ I'm interested in bridging visual understanding and controllable generation in A
 
 Education
 ======
-* **Ph.D. in Electrical and Computer Engineering**, Georgia Institute of Technology, 2024-Present
-  * Location: Atlanta, GA
-  * Advisor: Ghassan AlRegib
 
-* **M.S. in Electrical and Computer Engineering**, Georgia Institute of Technology, 2024
-  * Location: Atlanta, GA
-  * GPA: 4.0/4.0
-
-* **B.S. in Biosystems Engineering & Computer Science and Engineering**, Seoul National University, 2021
-  * Location: Seoul, South Korea
-  * Supported by Hyundai Motor Group Research Scholarship (Tuition and Stipend)
- 
+* **M.S. in Data Science**, the University of Sydney, 2023
+  * Location: Sydney, AU
+  
+* **B.S. in Computer Science**, the University of Sydney, 2021
+  * Location: Sydney, AU
 
 A data-driven personal website
 ======
