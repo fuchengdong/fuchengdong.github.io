@@ -1,4 +1,4 @@
----
+<img width="432" height="13" alt="image" src="https://github.com/user-attachments/assets/543ee51e-ed50-4ba2-af85-dbd5b308ee95" />---
 permalink: /
 title: "About me"
 author_profile: true
@@ -14,10 +14,10 @@ I'm interested in bridging visual understanding and controllable generation in A
 Education
 ======
 
-* **M.S. in Data Science**<br>
+* **M.S. in Data Science** | Feb. 2022 – Feb. 2023<br>
   [<span style="color: #ff8c42;">the University of Sydney</span>](https://www.sydney.edu.au/), Sydney, AU
   
-* **B.S. in Computer Science**<br>
+* **B.S. in Computer Science**| Mar. 2018 – Aug. 2021<br>
   [<span style="color: #ff8c42;">the University of Sydney</span>](https://www.sydney.edu.au/), Sydney, AU
 
 A data-driven personal website
