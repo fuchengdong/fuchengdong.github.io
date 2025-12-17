@@ -10,6 +10,22 @@ Hi! I'm Chengdong Fu, a Machine Learning Engineer with 3 years of industry exper
 
 I'm interested in bridging visual understanding and controllable generation in AI systems. Specifically, I wish to use computer vision and multi-modal learning algorithms to develop efficient personalization techniques for diffusion models, Enabling rich, fine-grained control over user interactions for customized content creation experiences.
 
+
+Education
+======
+* **Ph.D. in Electrical and Computer Engineering**, Georgia Institute of Technology, 2024-Present
+  * Location: Atlanta, GA
+  * Advisor: Ghassan AlRegib
+
+* **M.S. in Electrical and Computer Engineering**, Georgia Institute of Technology, 2024
+  * Location: Atlanta, GA
+  * GPA: 4.0/4.0
+
+* **B.S. in Biosystems Engineering & Computer Science and Engineering**, Seoul National University, 2021
+  * Location: Seoul, South Korea
+  * Supported by Hyundai Motor Group Research Scholarship (Tuition and Stipend)
+ 
+
 A data-driven personal website
 ======
 Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
