@@ -23,10 +23,15 @@ Education
 Featured Projects
 ======
 
-featured: true
-feature-order: 1
-feature-title: Multi-level and Multi-modal Action Anticipation
-feature-description: Action anticipation framework using multi-modal and hierarchical modeling
+{% for paper in site.papers %}
+  {% if paper.featured == true %}
+    <div class="paper-card">
+      <img src="{{ paper.image }}" alt="{{ paper.feature-title }}">
+      <h3>{{ paper.feature-title }}</h3>
+      <p>{{ paper.feature-description }}</p>
+    </div>
+  {% endif %}
+{% endfor %}
 
 
 
