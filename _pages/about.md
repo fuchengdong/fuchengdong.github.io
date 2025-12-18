@@ -105,9 +105,8 @@ Featured Projects
   
   <div class="project-card">
     <h3>Multi-Modal Region-Aware Image Generation Framework</h3>
-    <div class="project-meta">Project Leader | Deployed on WeShop-AI</div>
     <div class="project-description">
-      Led end-to-end development of an interactive image generation pipeline for e-commerce applications, enabling multi-modal editing through text prompts, reference images, masks, and bounding boxes for region-specific generation and editing. Enhanced model robustness through custom alignment modules and in-domain pretraining on 1M samples, successfully deploying the system for user-customized services.
+      An advanced image editing system that empowers users with precise, region-specific control over AI-generated content. This innovative framework introduces an intuitive interaction paradigm where users can directly select and manipulate specific regions within an image, enabling targeted modifications while preserving the integrity of unselected areas.
     </div>
     <div class="project-tags">
       <span class="project-tag">Diffusion Models</span>
