@@ -104,20 +104,20 @@ Featured Projects
 <div class="project-cards">
   
   <div class="project-card">
-    <h3>Controllable Image Generation with Diffusion Models</h3>
-    <div class="project-meta">2023 - Present</div>
+    <h3>Multi-Modal Region-Aware Image Generation Framework</h3>
+    <div class="project-meta">Project Leader | Deployed on WeShop-AI</div>
     <div class="project-description">
-      Developed a modular framework for fine-grained control in diffusion models using semantic guidance and hierarchical control mechanisms. Achieved 30% improvement in user customization accuracy.
+      Led end-to-end development of an interactive image generation pipeline for e-commerce applications, enabling multi-modal editing through text prompts, reference images, masks, and bounding boxes for region-specific generation and editing. Enhanced model robustness through custom alignment modules and in-domain pretraining on 1M samples, successfully deploying the system for user-customized services.
     </div>
     <div class="project-tags">
       <span class="project-tag">Diffusion Models</span>
-      <span class="project-tag">PyTorch</span>
-      <span class="project-tag">Computer Vision</span>
+      <span class="project-tag">Multi-Modal Learning</span>
+      <span class="project-tag">E-commerce AI</span>
+      <span class="project-tag">Region Control</span>
     </div>
     <div class="project-links">
-      <a href="#" class="project-link">📄 Paper</a>
-      <a href="#" class="project-link">💻 Code</a>
       <a href="#" class="project-link">🎬 Demo</a>
+      <a href="#" class="project-link">📊 Case Study</a>
     </div>
   </div>
 
@@ -157,7 +157,6 @@ Featured Projects
   </div>
 
 </div>
-
 
 Getting started
 ======
