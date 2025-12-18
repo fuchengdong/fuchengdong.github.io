@@ -23,16 +23,140 @@ Education
 Featured Projects
 ======
 
-{% for paper in site.papers %}
-  {% if paper.featured == true %}
-    <div class="paper-card">
-      <img src="{{ paper.image }}" alt="{{ paper.feature-title }}">
-      <h3>{{ paper.feature-title }}</h3>
-      <p>{{ paper.feature-description }}</p>
-    </div>
-  {% endif %}
-{% endfor %}
+<style>
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
 
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-color: #ff8c42;
+}
+
+.project-card h3 {
+  color: #ff8c42;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.project-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.project-description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.project-tag {
+  background: #f5f5f5;
+  color: #555;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  border: 1px solid #e0e0e0;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.project-link {
+  color: #ff8c42;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: #e67a2e;
+  text-decoration: underline;
+}
+</style>
+
+<div class="project-cards">
+  
+  <div class="project-card">
+    <h3>Controllable Image Generation with Diffusion Models</h3>
+    <div class="project-meta">2023 - Present</div>
+    <div class="project-description">
+      Developed a modular framework for fine-grained control in diffusion models using semantic guidance and hierarchical control mechanisms. Achieved 30% improvement in user customization accuracy.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">Diffusion Models</span>
+      <span class="project-tag">PyTorch</span>
+      <span class="project-tag">Computer Vision</span>
+    </div>
+    <div class="project-links">
+      <a href="#" class="project-link">📄 Paper</a>
+      <a href="#" class="project-link">💻 Code</a>
+      <a href="#" class="project-link">🎬 Demo</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Multi-Modal Personalization System</h3>
+    <div class="project-meta">2022 - 2023</div>
+    <div class="project-description">
+      Built an efficient personalization pipeline integrating vision-language models for customized content creation. Reduced inference time by 40% while maintaining generation quality.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">Multi-Modal Learning</span>
+      <span class="project-tag">CLIP</span>
+      <span class="project-tag">Stable Diffusion</span>
+    </div>
+    <div class="project-links">
+      <a href="#" class="project-link">📄 Paper</a>
+      <a href="#" class="project-link">💻 Code</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Plug-and-Play Control Modules for GANs</h3>
+    <div class="project-meta">2021 - 2022</div>
+    <div class="project-description">
+      Designed modular control architectures for StyleGAN that enable semantic attribute manipulation without retraining. Successfully deployed in production environments.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">GANs</span>
+      <span class="project-tag">StyleGAN</span>
+      <span class="project-tag">Semantic Control</span>
+    </div>
+    <div class="project-links">
+      <a href="#" class="project-link">📄 Paper</a>
+      <a href="#" class="project-link">💻 Code</a>
+      <a href="#" class="project-link">🎬 Demo</a>
+    </div>
+  </div>
+
+</div>
 
 
 Getting started
