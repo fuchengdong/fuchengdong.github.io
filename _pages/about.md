@@ -105,6 +105,7 @@ Featured Projects
   
   <div class="project-card">
     <h3>Multi-Modal Region-Aware Image Generation Framework</h3>
+    <div class="project-meta">2022 - 2023</div>
     <div class="project-description">
       An advanced image editing system that empowers users with precise, region-specific control over AI-generated content. This innovative framework introduces an intuitive interaction paradigm where users can directly select and manipulate specific regions within an image, enabling targeted modifications while preserving the integrity of unselected areas.
     </div>
@@ -124,7 +125,7 @@ Featured Projects
     <h3>Ultra-High Fidelity 4× Image Super-Resolution via Progressive Diffusion</h3>
     <div class="project-meta">2022 - 2023</div>
     <div class="project-description">
-      Diffusion-based 4× Super-Resolution framework for achieving ultra-high fidelity image reconstruction through progressive refinement and perceptual optimization.
+      A novel diffusion-based super-resolution framework designed to achieve 4× upscaling with ultra-high fidelity image reconstruction. leveraging the power of denoising diffusion probabilistic models (DDPMs) combined with progressive refinement strategies and perceptual optimization techniques to generate photorealistic high-resolution images from low-resolution inputs.
     </div>
     <div class="project-tags">
       <span class="project-tag">Diffusion Models</span>
