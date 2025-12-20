@@ -139,22 +139,25 @@ Featured Projects
   </div>
 
   <div class="project-card">
-    <h3>Plug-and-Play Control Modules for GANs</h3>
+    <h3>AI-Powered Precision Background Removal</h3>
     <div class="project-meta">2021 - 2022</div>
     <div class="project-description">
-      Designed modular control architectures for StyleGAN that enable semantic attribute manipulation without retraining. Successfully deployed in production environments.
+      High-performance background removal system leveraging deep learning for instant, accurate results. Features intelligent edge detection and matting algorithms that handle challenging scenarios including intricate hair details, fur textures, and complex lighting conditions. Delivers professional-grade cutouts in seconds, ideal for e-commerce platforms, photography studios, and automated content generation workflows.
     </div>
     <div class="project-tags">
-      <span class="project-tag">GANs</span>
-      <span class="project-tag">StyleGAN</span>
-      <span class="project-tag">Semantic Control</span>
+      <span class="project-tag">Deep Matting</span>
+      <span class="project-tag">Semantic Segmentation</span>
+      <span class="project-tag">U-Net</span>
+      <span class="project-tag">Alpha Matting</span>
+      <span class="project-tag">Computer Vision</span>
+      <span class="project-tag">PyTorch</span>
     </div>
     <div class="project-links">
       <a href="#" class="project-link">📄 Paper</a>
       <a href="#" class="project-link">💻 Code</a>
       <a href="#" class="project-link">🎬 Demo</a>
     </div>
-  </div>
+</div>
 
 </div>
 
