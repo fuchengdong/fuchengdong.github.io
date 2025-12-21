@@ -159,6 +159,25 @@ Featured Projects
     </div>
 </div>
 
+<div class="project-card">
+    <h3>PromptPalette: Frequency-Aware Text Fusion for Robust Diffusion Guidance</h3>
+    <div class="project-meta">2022 - 2023</div>
+    <div class="project-description">
+       A frequency-aware adaptive text fusion module designed to strengthen diffusion guidance for complex prompts. The key idea is to explicitly model and re-balance high-frequency and low-frequency textual information, and then fuse them into a unified guidance representation that is dynamically conditioned on the prompt’s internal frequency structure.
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">Deep Matting</span>
+      <span class="project-tag">Semantic Segmentation</span>
+      <span class="project-tag">U-Net</span>
+      <span class="project-tag">Alpha Matting</span>
+      <span class="project-tag">Computer Vision</span>
+      <span class="project-tag">PyTorch</span>
+    </div>
+    <div class="project-links">
+      <a href="#" class="project-link">📄 Paper</a>
+      <a href="#" class="project-link">💻 Code</a>
+      <a href="#" class="project-link">🎬 Demo</a>
+    </div>
 </div>
 
 Getting started
