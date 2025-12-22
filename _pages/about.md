@@ -104,6 +104,28 @@ Featured Projects
 <div class="project-cards">
   
   <div class="project-card">
+    <h3>A Long-Term Consistent Video World Model</h3>
+    <div class="project-meta">2022 - 2023</div>
+    <div class="project-description">
+       A real-time world-model that generates continuous video streams while maintaining long-horizon coherence. Designed for interactive, low-latency use，supports real-time updates from user inputs or events while keeping the world consistent—so actions have lasting consequences and the scene remains logically aligned over time. 
+    </div>
+    <div class="project-tags">
+      <span class="project-tag">World Models</span>
+      <span class="project-tag">Video Generation</span>
+      <span class="project-tag">Temporal Consistency</span>
+      <span class="project-tag">Real-Time Inference</span>
+    </div>
+    <div class="project-links">
+      <a href="#" class="project-link">🎬 Demo</a>
+      <a href="#" class="project-link">📊 Case Study</a>
+    </div>
+  </div>
+
+
+
+<div class="project-cards">
+  
+  <div class="project-card">
     <h3>Multi-Modal Region-Aware Image Generation Framework</h3>
     <div class="project-meta">2022 - 2023</div>
     <div class="project-description">
