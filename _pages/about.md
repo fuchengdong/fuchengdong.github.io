@@ -120,10 +120,6 @@ Featured Projects
       <a href="#" class="project-link">📊 Case Study</a>
     </div>
   </div>
-
-
-
-<div class="project-cards">
   
   <div class="project-card">
     <h3>Multi-Modal Region-Aware Image Generation Framework</h3>
