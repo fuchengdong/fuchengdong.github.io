@@ -248,16 +248,24 @@ a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
                 <div class="pub-card">
                     <div class="row">
                         <div class="col-l col-xs-12 col-lg-3">
-                            <img src="https://via.placeholder.com/300x200/845836/ffffff?text=Project+3" alt="Project 3" />
+                            <video
+                                id="made-game0-video"
+                                src="./videos/made_game0.mp4"
+                                autoplay
+                                loop
+                                muted
+                                playsinline
+                                preload="auto"
+                            ></video>
                         </div>
                         <div class="col-r col-xs-12 col-lg-9">
                             <div class="pub-card-body">
-                                <h5 class="title">Multi-Modal Region-Aware Image Generation Framework</h5>
+                                <h5 class="title">Playable Game Worlds via Interactive Video Generation</h5>
                                 <h6 class="authors">
-                                    An advanced image editing system that empowers users with precise, region-specific control over AI-generated content. This innovative framework introduces an intuitive interaction paradigm where users can directly select and manipulate specific regions within an image, enabling targeted modifications while preserving the integrity of unselected areas.
+                                    A playable world-generation system that turns continuous video synthesis into a third-person game experience. Character motion is driven by real-time WASD control while the surrounding environment is generated on the fly, preserving spatial layout, lighting, and temporal coherence—so walking and exploring feel like navigating a persistent world rather than watching a clip.
                                 </h6>
                                 <p class="info">
-                                    <span class="conference">2022 - 2023</span>
+                                    <span class="conference">2025 - Present</span>
                                     <a target="_blank" href="#">Demo</a>
                                     <a target="_blank" href="#">Case Study</a>
                                 </p>
@@ -359,7 +367,8 @@ a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
 (function () {
     var videos = [
         document.getElementById('demo-harbour-video'),
-        document.getElementById('force-vase-video')
+        document.getElementById('force-vase-video'),
+        document.getElementById('made-game0-video')
     ];
     videos.forEach(function(video) {
         if (!video) return;
