@@ -191,8 +191,8 @@ a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
                     <div class="row">
                         <div class="col-l col-xs-12 col-lg-3">
                             <video
-                                id="demo-harbour-video"
-                                src="./videos/demo_harbour.mp4"
+                                id="made-robot2-video"
+                                src="https://oliaikk8icqjcsuc.public.blob.vercel-storage.com/made_robot2.mp4"
                                 autoplay
                                 loop
                                 muted
@@ -202,9 +202,9 @@ a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
                         </div>
                         <div class="col-r col-xs-12 col-lg-9">
                             <div class="pub-card-body">
-                                <h5 class="title">A Long-Term Consistent Video World Generation</h5>
+                                <h5 class="title">Camera-Controlled Generation for Video World Models</h5>
                                 <h6 class="authors">
-                                    A real-time world-model that generates continuous video streams while maintaining long-horizon coherence. Designed for interactive, low-latency use, supports real-time updates from user inputs or events while keeping the world consistent—so actions have lasting consequences and the scene remains logically aligned over time.
+                                    A camera-conditioned video world model that treats viewpoint as an explicit control signal. Conditioned on a camera trajectory, it maintains a persistent latent scene state and rolls out spatiotemporally consistent observations, preserving 3D geometry, object identity, and illumination under novel views.
                                 </h6>
                                 <p class="info">
                                     <span class="conference">2025 - Present</span>
@@ -277,18 +277,26 @@ a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
                 <div class="pub-card">
                     <div class="row">
                         <div class="col-l col-xs-12 col-lg-3">
-                            <img src="https://via.placeholder.com/300x200/427e3e/ffffff?text=Project+4" alt="Project 4" />
+                            <video
+                                id="demo-harbour-video"
+                                src="./videos/demo_harbour.mp4"
+                                autoplay
+                                loop
+                                muted
+                                playsinline
+                                preload="auto"
+                            ></video>
                         </div>
                         <div class="col-r col-xs-12 col-lg-9">
                             <div class="pub-card-body">
-                                <h5 class="title">Ultra-High Fidelity 4× Image Super-Resolution via Progressive Diffusion</h5>
+                                <h5 class="title">A Long-Term Consistent Video World Generation</h5>
                                 <h6 class="authors">
-                                    A novel diffusion-based super-resolution framework designed to achieve 4× upscaling with ultra-high fidelity image reconstruction. Leveraging the power of denoising diffusion probabilistic models (DDPMs) combined with progressive refinement strategies and perceptual optimization techniques to generate photorealistic high-resolution images from low-resolution inputs.
+                                    A real-time world-model that generates continuous video streams while maintaining long-horizon coherence. Designed for interactive, low-latency use, supports real-time updates from user inputs or events while keeping the world consistent—so actions have lasting consequences and the scene remains logically aligned over time.
                                 </h6>
                                 <p class="info">
-                                    <span class="conference">2022 - 2023</span>
-                                    <a target="_blank" href="#">Paper</a>
-                                    <a target="_blank" href="#">Code</a>
+                                    <span class="conference">2025 - Present</span>
+                                    <a target="_blank" href="#">Demo</a>
+                                    <a target="_blank" href="#">Case Study</a>
                                 </p>
                             </div>
                         </div>
@@ -366,6 +374,7 @@ a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
 // ── 视频强制循环播放 ──────────────────────────────────────────
 (function () {
     var videos = [
+        document.getElementById('made-robot2-video'),
         document.getElementById('demo-harbour-video'),
         document.getElementById('force-vase-video'),
         document.getElementById('made-game0-video')
