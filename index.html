@@ -1,451 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Chengdong Fu</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Chengdong Fu - Personal Homepage">
-    <meta name="keywords" content="Chengdong Fu,Computer Vision,Machine Learning,Deep Learning,Artificial Intelligence">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <style type="text/css">
-:root {
-    --background-color: #ffffff;
-    --highlight-color: #b6274e;
-    --main-color: #394661;
-    --link-color: #427e3e;
-    --link-color-hover: #292c1f;
-    --secondary-link-color: #845836;
-    --secondary-link-border-color: #7d99b1;
-    --secondary-content-background-color: #feffff;
-    --link-button-background-color: #fafdff;
-}
-
-html,body{margin:0;padding:0;background-color:#ffffff;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;}
-a{color:var(--link-color);text-decoration:none;}
-a:hover{color:var(--link-color-hover);cursor:pointer;text-decoration:none;}
-
-#main{margin:0 auto 30px;padding:45px 30px 15px;width:100%;min-width:240px;text-align:center;background-color:var(--background-color)}
-.highlight{color:var(--highlight-color);font-weight:600}
-.highlight:hover{color:var(--highlight-color);font-weight:600}
-
-.main-content{padding:0;text-align:center;cursor:default;}
-@media (min-width: 768px) {.main-content{width:66%;min-width:668px;margin:auto;}}
-@media (min-width: 1200px) {.main-content{width:66%;max-width:1080px;margin:auto;}}
-
-#main-content-container{margin:0 auto;padding:15px 0 0;max-width:1080px;}
-@media (min-width: 768px) { #main-content-container{padding:15px 0 0;} }
-#main-content-container .col-avatar{text-align:center;min-width:220px;}
-#main-content-container .col-avatar .avatar{z-index:100;width:200px;height:200px;border-radius:100%;box-shadow:0 0 0 0.3em #eee;opacity:1;object-fit:cover;}
-
-#main-content-container .col-info{height:100%;align-items:center;}
-#main-info-container{padding-top:15px}
-#main-info-container .col-name{text-align:center;margin-top:30px}
-@media (min-width: 768px) { #main-info-container .col-name{text-align:left;margin-top:0;}}
-#main-info-container .col-name .text{text-align:left;margin-bottom:0.5rem;}
-#main-info-container .col-name .name{color:var(--main-color);font-size:1.85em;font-family:"Source Sans Pro",Helvetica,sans-serif;font-weight:600;}
-#main-info-container .col-name .email{color:#333;font-size:16px;margin:10px 0;}
-#main-info-container .col-link{text-align:center;margin:15px 0;}
-#main-info-container .col-link ul {margin:0px auto;padding:0;list-style:none;text-align:center}
-#main-info-container .col-link li {display:inline-block;margin:0 10px;padding:0;color:#ccc;line-height:10px}
-#main-info-container .col-link li a{width:40px;height:40px;color:#999;padding:0;font-size:40px;line-height:40px;transition:color 0.3s;}
-#main-info-container .col-link li a:hover{color:var(--link-color);text-decoration:none;}
-
-.content-container{width:100%;padding:0 30px}
-
-#pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;}
-#pub-container .subtitle{color:var(--main-color);font-size:1.5em;font-weight:600;margin-bottom:20px;}
-#pub-card-container .pub-card{width: 100%;padding-bottom:25px;font-size:1rem;border-bottom:1px solid #eee;margin-bottom:25px;}
-#pub-card-container .pub-card:last-child{border-bottom:none;}
-#pub-card-container .pub-card .col-l{text-align:center;padding-top:10px}
-#pub-card-container .pub-card .col-r{padding-top:10px}
-@media (min-width: 768px) {
-  #pub-card-container .pub-card .col-l{flex:0 0 30%;max-width:30%}
-  #pub-card-container .pub-card .col-r{flex:0 0 70%;max-width:70%}
-}
-#pub-card-container .pub-card img{width:100%;margin:0 auto;border-radius:5px;}
-#pub-card-container .pub-card video{width:100%;margin:0 auto;border-radius:5px;display:block;object-fit:cover;}
-#pub-card-container .pub-card-body{width:100%;background:transparent;padding-left:0px}
-#pub-card-container .pub-card .title{font-weight:600;font-size:1.1rem;margin-bottom:8px;line-height:1.4;color:#222;}
-#pub-card-container .pub-card .authors{font-weight:400;color:#666666;margin-bottom:8px;line-height:1.4;font-size:0.95rem;}
-#pub-card-container .pub-card .authors a{color:#666666}
-#pub-card-container .pub-card .authors u{color:#333333;font-weight:600;text-decoration:none}
-#pub-card-container .pub-card .conference{color:#333333;font-weight:600;margin-right:10px;}
-#pub-card-container .pub-card .info{line-height:1.8;}
-#pub-card-container .pub-card .info a{margin-right:10px;padding:3px 10px;background:#f0f0f0;border-radius:3px;font-size:0.9rem;}
-#pub-card-container .pub-card .info a:hover{background:#e0e0e0;}
-
-#footer{padding:30px 0;margin-top:3rem;min-width:240px;background:var(--background-color);font-size:14px;text-align:center;border-top:1px solid #e0e0e0;}
-#footer .container{max-width:540px;padding:0 45px;}
-#footer .copyright{margin:10px auto;font-size:0.95rem;line-height:1.6;color:var(--main-color)}
-#footer a{color:#666666}
-#footer a:hover{color:#333333}
-
-.bold{font-weight:600}
-
-#ditto-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-#ditto-container:hover {
-    transform: scale(1.3) rotate(-10deg);
-}
-#ditto-container img {
-    width: 64px;
-    height: 64px;
-    image-rendering: pixelated;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
-}
-#ditto-tooltip {
-    position: absolute;
-    bottom: 72px;
-    right: 0;
-    background: #fff;
-    border: 2px solid #b6274e;
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 12px;
-    color: #394661;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-#ditto-tooltip::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    right: 16px;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid #b6274e;
-}
-#ditto-container:hover #ditto-tooltip {
-    opacity: 1;
-}
-
-@keyframes transformPop {
-    0%   { transform: scale(1);    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25))      brightness(1);   }
-    30%  { transform: scale(0.3) rotate(20deg);  filter: drop-shadow(0 2px 6px rgba(182,39,78,0.6))  brightness(2);   }
-    60%  { transform: scale(1.4) rotate(-10deg); filter: drop-shadow(0 2px 6px rgba(182,39,78,0.8))  brightness(1.5); }
-    100% { transform: scale(1);    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25))      brightness(1);   }
-}
-#ditto-container.transforming img {
-    animation: transformPop 0.5s ease forwards;
-}
-    </style>
-</head>
-
-<body>
-
-<div id="main">
-    <div class="main-content">
-        <div id="main-content-container" class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-3 col-avatar">
-                    <img src="./images/avatar.jpg" class="avatar" alt="Chengdong Fu" />
-                </div>
-                <div class="col-sm-12 col-md-8">
-                    <div id="main-info-container">
-                        <div class="col-name">
-                            <h1 class="name"><span>Chengdong Fu</span></h1>
-                            <p class="email">
-                                <span style="margin-right:1em">Email: fuchengdong1@outlook.com </span>
-                            </p>
-                            <p class="text">
-                                Hi! I'm Chengdong Fu, a Machine Learning Engineer with 3 years of industry experience specializing in generative AI and computer vision. My expertise lies in designing controllable generative models through semantic guidance and hierarchical control mechanisms, with a focus on modular, plug-and-play architectures.
-                            </p>
-                            <p class="text">
-                                I'm interested in bridging visual understanding and controllable generation in AI systems. Specifically, I wish to use computer vision and multi-modal learning algorithms to develop efficient personalization techniques for diffusion models, enabling rich, fine-grained control over user interactions for customized content creation experiences.
-                            </p>
-                        </div>
-                        <div class="col-link">
-                            <ul>
-                                <li><a target="_blank" href="https://github.com/chengdongfu" title="GitHub"><i class="fa fa-github"></i></a></li>
-                                <li><a target="_blank" href="https://scholar.google.com" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a></li>
-                                <li><a target="_blank" href="https://www.linkedin.com/in/chengdong-fu-909597228" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a target="_blank" href="https://twitter.com" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="main-content">
-    <div class="content-container">
-        <div id="pub-container">
-            <h5 class="subtitle">Featured Projects</h5>
-            <div id="pub-card-container">
-
-                <div class="pub-card">
-                    <div class="row">
-                        <div class="col-l col-xs-12 col-lg-3">
-                            <video
-                                id="made-robot2-video"
-                                src="https://oliaikk8icqjcsuc.public.blob.vercel-storage.com/made_robot2.mp4"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
-                                preload="auto"
-                            ></video>
-                        </div>
-                        <div class="col-r col-xs-12 col-lg-9">
-                            <div class="pub-card-body">
-                                <h5 class="title">Camera-Controlled Generation for Video World Models</h5>
-                                <h6 class="authors">
-                                    A camera-conditioned video world model that treats viewpoint as an explicit control signal. Conditioned on a camera trajectory, it maintains a persistent latent scene state and rolls out spatiotemporally consistent observations, preserving 3D geometry, object identity, and illumination under novel views.
-                                </h6>
-                                <p class="info">
-                                    <span class="conference">2025 - Present</span>
-                                    <a target="_blank" href="#">Demo</a>
-                                    <a target="_blank" href="#">Case Study</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-card">
-                    <div class="row">
-                        <div class="col-l col-xs-12 col-lg-3">
-                            <video
-                                id="generated-robot-video"
-                                src="./videos/generated_robot_video.mp4"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
-                                preload="auto"
-                            ></video>
-                        </div>
-                        <div class="col-r col-xs-12 col-lg-9">
-                            <div class="pub-card-body">
-                                <h5 class="title">World Action Model</h5>
-                                <h6 class="authors">
-                                    A world action model that generates video from actions. Conditioned on an action sequence, turning control into a persistent visual world rather than a clip played on a fixed path.
-                                </h6>
-                                <p class="info">
-                                    <span class="conference">2025 - Present</span>
-                                    <a target="_blank" href="#">Demo</a>
-                                    <a target="_blank" href="#">Case Study</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-card">
-                    <div class="row">
-                        <div class="col-l col-xs-12 col-lg-3">
-                            <video
-                                id="force-vase-video"
-                                src="./videos/force_vase.mp4"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
-                                preload="auto"
-                            ></video>
-                        </div>
-                        <div class="col-r col-xs-12 col-lg-9">
-                            <div class="pub-card-body">
-                                <h5 class="title">Streaming Video Synthesis with Interactive Physical Conditioning</h5>
-                                <h6 class="authors">
-                                    A novel framework for enabling real-time streaming video generation conditioned on dynamic interactive inputs. The system ensures that motion continuity, temporal coherence, and visual fidelity remain consistent across continuously synthesized frames, from single-prompt initialization to multi-modal interactive control signals.
-                                </h6>
-                                <p class="info">
-                                    <span class="conference">2025 - Present</span>
-                                    <a target="_blank" href="#">Demo</a>
-                                    <a target="_blank" href="#">Case Study</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-card">
-                    <div class="row">
-                        <div class="col-l col-xs-12 col-lg-3">
-                            <video
-                                id="made-game0-video"
-                                src="./videos/made_game0.mp4"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
-                                preload="auto"
-                            ></video>
-                        </div>
-                        <div class="col-r col-xs-12 col-lg-9">
-                            <div class="pub-card-body">
-                                <h5 class="title">Playable Game Worlds via Interactive Video Generation</h5>
-                                <h6 class="authors">
-                                    A playable world-generation system that turns continuous video synthesis into a third-person game experience. Character motion is driven by real-time WASD control while the surrounding environment is generated on the fly, preserving spatial layout, lighting, and temporal coherence—so walking and exploring feel like navigating a persistent world rather than watching a clip.
-                                </h6>
-                                <p class="info">
-                                    <span class="conference">2025 - Present</span>
-                                    <a target="_blank" href="#">Demo</a>
-                                    <a target="_blank" href="#">Case Study</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pub-card">
-                    <div class="row">
-                        <div class="col-l col-xs-12 col-lg-3">
-                            <video
-                                id="demo-harbour-video"
-                                src="./videos/demo_harbour.mp4"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
-                                preload="auto"
-                            ></video>
-                        </div>
-                        <div class="col-r col-xs-12 col-lg-9">
-                            <div class="pub-card-body">
-                                <h5 class="title">A Long-Term Consistent Video World Generation</h5>
-                                <h6 class="authors">
-                                    A real-time world-model that generates continuous video streams while maintaining long-horizon coherence. Designed for interactive, low-latency use, supports real-time updates from user inputs or events while keeping the world consistent—so actions have lasting consequences and the scene remains logically aligned over time.
-                                </h6>
-                                <p class="info">
-                                    <span class="conference">2025 - Present</span>
-                                    <a target="_blank" href="#">Demo</a>
-                                    <a target="_blank" href="#">Case Study</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="footer">
-    <div class="container">
-        <div class="copyright">
-            &copy; 2025 Chengdong Fu. All rights reserved.
-        </div>
-    </div>
-</div>
-
-<!-- 宝可梦 固定右下角 -->
-<div id="ditto-container">
-    <div id="ditto-tooltip"></div>
-    <img id="pokemon-sprite" src="" alt="Pokemon" />
-</div>
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-<script>
-// ── 视频强制循环播放 ──────────────────────────────────────────
-(function () {
-    var videos = [
-        document.getElementById('made-robot2-video'),
-        document.getElementById('generated-robot-video'),
-        document.getElementById('demo-harbour-video'),
-        document.getElementById('force-vase-video'),
-        document.getElementById('made-game0-video')
-    ];
-    videos.forEach(function(video) {
-        if (!video) return;
-        video.addEventListener('canplay', function () {
-            video.play().catch(function (e) {
-                console.warn('Autoplay blocked:', e);
-            });
-        });
-        video.addEventListener('ended', function () {
-            video.currentTime = 0;
-            video.play().catch(function (e) {
-                console.warn('Loop replay blocked:', e);
-            });
-        });
-        if (video.readyState >= 3) {
-            video.play().catch(function (e) {
-                console.warn('Direct play blocked:', e);
-            });
-        }
-    });
-})();
-
-// ── 宝可梦 ────────────────────────────────────────────────────
-(function () {
-  const DITTO = {
-    url:  'https://projectpokemon.org/images/normal-sprite/ditto.gif',
-    name: "✨ It's Ditto!"
-  };
-  const CANDIDATES = [
-    { url: 'https://projectpokemon.org/images/normal-sprite/munchlax.gif', name: "🍖 Transform!" },
-    { url: 'https://projectpokemon.org/images/normal-sprite/swirlix.gif',  name: "🍬 Transform!" },
-    { url: 'https://projectpokemon.org/images/normal-sprite/goomy.gif',    name: "💧 Transform!" },
-  ];
-
-  const container = document.getElementById('ditto-container');
-  const sprite    = document.getElementById('pokemon-sprite');
-  const tooltip   = document.getElementById('ditto-tooltip');
-
-  let isDitto   = false;
-  let animating = false;
-  let lastIndex = -1;
-
-  function pickRandom() {
-    let idx;
-    do { idx = Math.floor(Math.random() * CANDIDATES.length); }
-    while (idx === lastIndex && CANDIDATES.length > 1);
-    lastIndex = idx;
-    return CANDIDATES[idx];
-  }
-
-  function applyPokemon(pokemon) {
-    sprite.src          = pokemon.url;
-    sprite.alt          = pokemon.name;
-    tooltip.textContent = pokemon.name;
-  }
-
-  function triggerTransform(nextPokemon) {
-    if (animating) return;
-    animating = true;
-    container.classList.add('transforming');
-    container.addEventListener('animationend', function onEnd() {
-      container.removeEventListener('animationend', onEnd);
-      container.classList.remove('transforming');
-      applyPokemon(nextPokemon);
-      animating = false;
-    });
-  }
-
-  applyPokemon(pickRandom());
-
-  container.addEventListener('click', function () {
-    if (animating) return;
-    if (!isDitto) {
-      isDitto = true;
-      triggerTransform(DITTO);
-    } else {
-      isDitto = false;
-      triggerTransform(pickRandom());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chengdong Fu</title>
+  <meta name="author" content="Chengdong Fu">
+  <meta name="description" content="Chengdong Fu — Machine Learning Engineer working on controllable generative models, computer vision, and video world models.">
+  <meta name="keywords" content="Chengdong Fu, Computer Vision, Machine Learning, Generative AI, World Models">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #980000;
+      --ink: #1c1c1c;
+      --link: #002D72;
+      --link-hover: #f09228;
+      --muted: #555;
+      --faint: #999;
+      --line: #e6e6e6;
+      --c-camera: #0d9488;
+      --c-action: #d97706;
+      --c-stream: #7c3aed;
+      --c-play: #db2777;
+      --c-world: #2563eb;
     }
-  });
-})();
-</script>
 
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: #fff;
+      color: var(--ink);
+      font-family: Lato, Verdana, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.62;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); }
+    img, video { max-width: 100%; }
+
+    .page {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 12px 72px;
+    }
+
+    /* ── Bio ─────────────────────────────────────────── */
+    .bio {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 34px 12px 8px;
+    }
+    .bio-photo {
+      flex: 0 0 210px;
+      width: 210px;
+    }
+    .bio-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, .12);
+    }
+    .bio-body { flex: 1 1 auto; min-width: 0; padding-top: 4px; }
+    .bio-name {
+      margin: 0;
+      font-size: 34px;
+      font-weight: 900;
+      color: #111;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+    .bio-sub {
+      margin: 8px 0 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .bio-sub a { color: var(--muted); }
+    .bio-sub a:hover { color: var(--link-hover); }
+    .bio-body p { margin: 0 0 11px; }
+    .social-links { margin: 16px 0 0; }
+    .social-links a {
+      display: inline-block;
+      margin: 3px 4px 3px 0;
+      padding: 5px 16px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #555;
+      transition: border-color .2s, background .2s, color .2s;
+    }
+    .social-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #fbf4f4;
+    }
+
+    /* ── Sections ────────────────────────────────────── */
+    .section-heading {
+      padding: 30px 20px 8px;
+    }
+    .section-heading h2 {
+      display: inline-block;
+      margin: 0;
+      font-family: Lato, Verdana, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--accent);
+      text-transform: lowercase;
+      letter-spacing: 0;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+    }
+    .statement { padding: 4px 20px 0; }
+    .statement p { margin: 0 0 13px; line-height: 1.7; }
+    .hl { color: var(--accent); }
+    .section-note {
+      margin: 0;
+      padding: 0 20px 4px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* ── Research strip ──────────────────────────────── */
+    .research-strip {
+      position: relative;
+      overflow: hidden;
+      margin: 12px 8px 6px;
+      border-top: 1.5px solid rgba(0, 0, 0, .10);
+      border-bottom: 1.5px solid rgba(0, 0, 0, .10);
+      font-family: Lato, sans-serif;
+    }
+    .research-strip::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg,
+        var(--c-camera) 0%, var(--c-action) 25%,
+        var(--c-stream) 50%, var(--c-play) 75%, var(--c-world) 100%);
+      background-size: 200% 100%;
+      animation: rs-shimmer 7s linear infinite;
+      z-index: 20;
+    }
+    @keyframes rs-shimmer { to { background-position: 200% 0; } }
+
+    .rs-label {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      padding: 0 14px 0 12px;
+      background: #fff;
+      border-right: 1px solid rgba(0, 0, 0, .08);
+    }
+    .rs-label span {
+      font-family: Syne, sans-serif;
+      font-weight: 700;
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .rs-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--c-camera);
+      margin-right: 8px;
+      flex: 0 0 auto;
+      animation: rs-pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes rs-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .3; transform: scale(.6); }
+    }
+    .rs-fade-l, .rs-fade-r {
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 36px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .rs-fade-l { left: 108px; background: linear-gradient(to right, #fff, transparent); }
+    .rs-fade-r { right: 0; background: linear-gradient(to left, #fff, transparent); }
+    .rs-viewport {
+      overflow: hidden;
+      margin-left: 108px;
+    }
+    .rs-track {
+      display: flex;
+      gap: 10px;
+      width: max-content;
+      padding: 14px 0 12px;
+      animation: rs-scroll 46s linear infinite;
+    }
+    .rs-track:hover { animation-play-state: paused; }
+    @keyframes rs-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .rs-card {
+      width: 196px;
+      flex-shrink: 0;
+      background: #f9fafb;
+      border: 1.5px solid rgba(0, 0, 0, .07);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      color: inherit;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .rs-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--ac);
+      color: inherit;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .09),
+                  0 0 0 3px color-mix(in srgb, var(--ac) 12%, transparent);
+    }
+    .rs-card[data-p="camera"] { --ac: var(--c-camera); }
+    .rs-card[data-p="action"] { --ac: var(--c-action); }
+    .rs-card[data-p="stream"] { --ac: var(--c-stream); }
+    .rs-card[data-p="play"]   { --ac: var(--c-play); }
+    .rs-card[data-p="world"]  { --ac: var(--c-world); }
+
+    .rs-thumb {
+      position: relative;
+      height: 112px;
+      background: #f3f4f6;
+      overflow: hidden;
+    }
+    .rs-thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s;
+    }
+    .rs-card:hover .rs-thumb video { transform: scale(1.05); }
+    .rs-tag {
+      position: absolute;
+      right: 7px;
+      bottom: 7px;
+      font-family: "DM Mono", ui-monospace, monospace;
+      font-size: 8.5px;
+      letter-spacing: .04em;
+      color: var(--ac);
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid color-mix(in srgb, var(--ac) 28%, transparent);
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+    .rs-body {
+      position: relative;
+      padding: 8px 10px 10px;
+      border-top: 1.5px solid rgba(0, 0, 0, .06);
+      background: #fff;
+    }
+    .rs-body::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 9px; bottom: 9px;
+      width: 2.5px;
+      border-radius: 2px;
+      background: var(--ac);
+      opacity: .7;
+    }
+    .rs-name {
+      display: block;
+      margin: 0 0 3px;
+      padding-left: 8px;
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: -.01em;
+      color: #111;
+    }
+    .rs-desc {
+      margin: 0;
+      padding-left: 8px;
+      font-size: 10.5px;
+      line-height: 1.45;
+      font-style: italic;
+      color: #888;
+    }
+
+    /* ── Projects ────────────────────────────────────── */
+    .projects { padding-top: 8px; }
+    .project {
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      padding: 18px 20px 20px;
+      border-radius: 4px;
+      scroll-margin-top: 18px;
+      transition: background .15s;
+    }
+    .project:hover { background: #fafafa; }
+    .project-media {
+      flex: 0 0 220px;
+      width: 220px;
+    }
+    .project-media video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      background: #f4f4f4;
+    }
+    .project-body { flex: 1 1 auto; min-width: 0; padding-top: 2px; }
+    .project-title {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.4;
+    }
+    .project-title a { color: #111; }
+    .project-title a:hover { color: var(--link-hover); }
+    .project-abstract {
+      margin: 4px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .project-meta {
+      margin: 6px 0 4px;
+      font-size: 14px;
+    }
+    .project-meta b { font-weight: 700; }
+    .project-links { margin: 6px 0 0; font-size: 14px; }
+    .project-links a { margin-right: 2px; }
+    .project-links .sep { color: #bbb; margin: 0 4px; }
+
+    .footer {
+      margin-top: 28px;
+      padding: 22px 20px 8px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 13px;
+      color: var(--faint);
+    }
+
+    /* ── Pokemon ─────────────────────────────────────── */
+    #ditto-container {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9999;
+      width: 72px;
+      height: 72px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      transition: transform .3s ease;
+    }
+    #ditto-container:hover { transform: scale(1.18) rotate(-8deg); }
+    #ditto-container:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 8px;
+    }
+    #ditto-container img {
+      width: 64px;
+      height: 64px;
+      image-rendering: pixelated;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .25));
+    }
+    #ditto-tooltip {
+      position: absolute;
+      right: 0;
+      bottom: 74px;
+      padding: 5px 10px;
+      background: #fff;
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      font-family: Lato, Verdana, Helvetica, sans-serif;
+      font-size: 12px;
+      color: var(--ink);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+    }
+    #ditto-tooltip::after {
+      content: '';
+      position: absolute;
+      right: 22px;
+      bottom: -8px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid var(--accent);
+    }
+    #ditto-container:hover #ditto-tooltip,
+    #ditto-container:focus-visible #ditto-tooltip { opacity: 1; }
+
+    @keyframes transformPop {
+      0%   { transform: scale(1); filter: drop-shadow(0 2px 6px rgba(0,0,0,.25)) brightness(1); }
+      30%  { transform: scale(.3) rotate(20deg); filter: drop-shadow(0 2px 8px rgba(152,0,0,.55)) brightness(2); }
+      60%  { transform: scale(1.35) rotate(-10deg); filter: drop-shadow(0 2px 8px rgba(152,0,0,.7)) brightness(1.5); }
+      100% { transform: scale(1); filter: drop-shadow(0 2px 6px rgba(0,0,0,.25)) brightness(1); }
+    }
+    #ditto-container.transforming img { animation: transformPop .5s ease forwards; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rs-track, .research-strip::before, .rs-dot { animation: none; }
+      #ditto-container, #ditto-container img { transition: none; }
+    }
+
+    @media screen and (max-width: 768px) {
+      .bio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 26px 16px 8px;
+      }
+      #ditto-container {
+        width: 56px;
+        height: 56px;
+        right: 10px;
+        bottom: 10px;
+      }
+      #ditto-container img { width: 48px; height: 48px; }
+      #ditto-tooltip { bottom: 58px; }
+      .bio-photo { width: 150px; flex-basis: auto; }
+      .bio-name { font-size: 28px; }
+      .project { flex-direction: column; gap: 12px; padding: 16px; }
+      .project-media { width: 100%; max-width: 420px; flex-basis: auto; }
+      .research-strip { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="bio">
+      <div class="bio-photo">
+        <img src="./images/avatar.jpg" alt="Chengdong Fu">
+      </div>
+      <div class="bio-body">
+        <h1 class="bio-name">Chengdong Fu</h1>
+        <p class="bio-sub">Pronounce: cheng-dong&nbsp;&nbsp;·&nbsp;&nbsp;Email: <a href="mailto:fuchengdong1@outlook.com">fuchengdong1 [at] outlook.com</a></p>
+        <p>Hi! I'm Chengdong Fu, a Machine Learning Engineer with 3 years of industry experience specializing in generative AI and computer vision.</p>
+        <p class="social-links">
+          <a href="mailto:fuchengdong1@outlook.com">Email</a>
+          <a href="https://github.com/chengdongfu" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://scholar.google.com" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://www.linkedin.com/in/chengdong-fu-909597228" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading"><h2>Research</h2></div>
+      <div class="statement">
+        <p>My expertise lies in designing <span class="hl">controllable generative models</span> through semantic guidance and hierarchical control mechanisms, with a focus on modular, plug-and-play architectures.</p>
+        <p>I'm interested in bridging <span class="hl">visual understanding and controllable generation</span> in AI systems. Specifically, I wish to use computer vision and multi-modal learning algorithms to develop efficient personalization techniques for diffusion models, enabling rich, <span class="hl">fine-grained control</span> over user interactions for customized content creation experiences.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading"><h2>Featured Projects</h2></div>
+      <p class="section-note">Selected work on camera control, action-conditioned video, and persistent world generation.</p>
+
+      <div class="research-strip" aria-label="Project highlights">
+        <div class="rs-label"><span class="rs-dot"></span><span>Highlights</span></div>
+        <div class="rs-fade-l" aria-hidden="true"></div>
+        <div class="rs-fade-r" aria-hidden="true"></div>
+        <div class="rs-viewport">
+          <div class="rs-track" id="rs-track"></div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project" id="camera-control">
+          <div class="project-media">
+            <video src="https://oliaikk8icqjcsuc.public.blob.vercel-storage.com/made_robot2.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title"><a href="#camera-control">Camera-Controlled Generation for Video World Models</a></h3>
+            <p class="project-abstract">A camera-conditioned video world model that treats viewpoint as an explicit control signal. Conditioned on a camera trajectory, it maintains a persistent latent scene state and rolls out spatiotemporally consistent observations, preserving 3D geometry, object identity, and illumination under novel views.</p>
+            <p class="project-meta"><b>2025 – Present</b></p>
+            <p class="project-links"><a href="#">Demo</a><span class="sep">|</span><a href="#">Case Study</a></p>
+          </div>
+        </article>
+
+        <article class="project" id="world-action">
+          <div class="project-media">
+            <video src="./videos/generated_robot_video.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title"><a href="#world-action">World Action Model</a></h3>
+            <p class="project-abstract">A world action model that generates video from actions. Conditioned on an action sequence, turning control into a persistent visual world rather than a clip played on a fixed path.</p>
+            <p class="project-meta"><b>2025 – Present</b></p>
+            <p class="project-links"><a href="#">Demo</a><span class="sep">|</span><a href="#">Case Study</a></p>
+          </div>
+        </article>
+
+        <article class="project" id="physical-stream">
+          <div class="project-media">
+            <video src="./videos/force_vase.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title"><a href="#physical-stream">Streaming Video Synthesis with Interactive Physical Conditioning</a></h3>
+            <p class="project-abstract">A novel framework for enabling real-time streaming video generation conditioned on dynamic interactive inputs. The system ensures that motion continuity, temporal coherence, and visual fidelity remain consistent across continuously synthesized frames, from single-prompt initialization to multi-modal interactive control signals.</p>
+            <p class="project-meta"><b>2025 – Present</b></p>
+            <p class="project-links"><a href="#">Demo</a><span class="sep">|</span><a href="#">Case Study</a></p>
+          </div>
+        </article>
+
+        <article class="project" id="playable-worlds">
+          <div class="project-media">
+            <video src="./videos/made_game0.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title"><a href="#playable-worlds">Playable Game Worlds via Interactive Video Generation</a></h3>
+            <p class="project-abstract">A playable world-generation system that turns continuous video synthesis into a third-person game experience. Character motion is driven by real-time WASD control while the surrounding environment is generated on the fly, preserving spatial layout, lighting, and temporal coherence—so walking and exploring feel like navigating a persistent world rather than watching a clip.</p>
+            <p class="project-meta"><b>2025 – Present</b></p>
+            <p class="project-links"><a href="#">Demo</a><span class="sep">|</span><a href="#">Case Study</a></p>
+          </div>
+        </article>
+
+        <article class="project" id="long-horizon">
+          <div class="project-media">
+            <video src="./videos/demo_harbour.mp4" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title"><a href="#long-horizon">A Long-Term Consistent Video World Generation</a></h3>
+            <p class="project-abstract">A real-time world-model that generates continuous video streams while maintaining long-horizon coherence. Designed for interactive, low-latency use, supports real-time updates from user inputs or events while keeping the world consistent—so actions have lasting consequences and the scene remains logically aligned over time.</p>
+            <p class="project-meta"><b>2025 – Present</b></p>
+            <p class="project-links"><a href="#">Demo</a><span class="sep">|</span><a href="#">Case Study</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">&copy; 2026 Chengdong Fu</footer>
+  </main>
+
+  <button id="ditto-container" type="button" aria-label="Transform Pokemon">
+    <span id="ditto-tooltip"></span>
+    <img id="pokemon-sprite" src="" alt="Pokemon">
+  </button>
+
+  <script>
+    (function () {
+      var cards = [
+        {
+          id: "camera-control",
+          key: "camera",
+          name: "Camera Control",
+          desc: "Viewpoint as an explicit control signal for a persistent video world.",
+          tag: "2025–Now",
+          src: "https://oliaikk8icqjcsuc.public.blob.vercel-storage.com/made_robot2.mp4"
+        },
+        {
+          id: "world-action",
+          key: "action",
+          name: "World Action",
+          desc: "Action sequences become a persistent visual world, not a fixed clip.",
+          tag: "2025–Now",
+          src: "./videos/generated_robot_video.mp4"
+        },
+        {
+          id: "physical-stream",
+          key: "stream",
+          name: "Physical Stream",
+          desc: "Real-time video conditioned on interactive physical input.",
+          tag: "2025–Now",
+          src: "./videos/force_vase.mp4"
+        },
+        {
+          id: "playable-worlds",
+          key: "play",
+          name: "Playable Worlds",
+          desc: "WASD-driven third-person worlds, generated as you walk.",
+          tag: "2025–Now",
+          src: "./videos/made_game0.mp4"
+        },
+        {
+          id: "long-horizon",
+          key: "world",
+          name: "Long Horizon",
+          desc: "Continuous video that stays coherent far beyond a single clip.",
+          tag: "2025–Now",
+          src: "./videos/demo_harbour.mp4"
+        }
+      ];
+
+      var track = document.getElementById("rs-track");
+      function cardHtml(card) {
+        return (
+          '<a class="rs-card" data-p="' + card.key + '" href="#' + card.id + '">' +
+            '<div class="rs-thumb">' +
+              '<video autoplay muted loop playsinline preload="metadata" src="' + card.src + '"></video>' +
+              '<span class="rs-tag">' + card.tag + '</span>' +
+            '</div>' +
+            '<div class="rs-body">' +
+              '<span class="rs-name">' + card.name + '</span>' +
+              '<p class="rs-desc">' + card.desc + '</p>' +
+            '</div>' +
+          '</a>'
+        );
+      }
+      var html = cards.map(cardHtml).join("");
+      track.innerHTML = html + html;
+
+      document.querySelectorAll("video").forEach(function (video) {
+        var play = function () {
+          video.play().catch(function () {});
+        };
+        video.addEventListener("canplay", play);
+        video.addEventListener("ended", function () {
+          video.currentTime = 0;
+          play();
+        });
+        if (video.readyState >= 2) play();
+      });
+    })();
+
+    (function () {
+      var DITTO = {
+        url: "https://projectpokemon.org/images/normal-sprite/ditto.gif",
+        name: "✨ It's Ditto!"
+      };
+      var CANDIDATES = [
+        { url: "https://projectpokemon.org/images/normal-sprite/munchlax.gif", name: "🍖 Transform!" },
+        { url: "https://projectpokemon.org/images/normal-sprite/swirlix.gif", name: "🍬 Transform!" },
+        { url: "https://projectpokemon.org/images/normal-sprite/goomy.gif", name: "💧 Transform!" }
+      ];
+
+      var container = document.getElementById("ditto-container");
+      var sprite = document.getElementById("pokemon-sprite");
+      var tooltip = document.getElementById("ditto-tooltip");
+      var isDitto = false;
+      var animating = false;
+      var lastIndex = -1;
+
+      function pickRandom() {
+        var idx;
+        do { idx = Math.floor(Math.random() * CANDIDATES.length); }
+        while (idx === lastIndex && CANDIDATES.length > 1);
+        lastIndex = idx;
+        return CANDIDATES[idx];
+      }
+
+      function applyPokemon(pokemon) {
+        sprite.src = pokemon.url;
+        sprite.alt = pokemon.name;
+        tooltip.textContent = pokemon.name;
+        container.setAttribute("aria-label", pokemon.name);
+      }
+
+      function triggerTransform(nextPokemon) {
+        if (animating) return;
+        animating = true;
+        container.classList.add("transforming");
+        container.addEventListener("animationend", function onEnd() {
+          container.removeEventListener("animationend", onEnd);
+          container.classList.remove("transforming");
+          applyPokemon(nextPokemon);
+          animating = false;
+        });
+      }
+
+      applyPokemon(pickRandom());
+
+      container.addEventListener("click", function () {
+        if (animating) return;
+        if (!isDitto) {
+          isDitto = true;
+          triggerTransform(DITTO);
+        } else {
+          isDitto = false;
+          triggerTransform(pickRandom());
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
