@@ -125,6 +125,23 @@
       font-size: 14px;
       color: var(--muted);
     }
+    .news {
+      list-style: none;
+      margin: 4px 20px 0;
+      padding: 0;
+    }
+    .news li {
+      position: relative;
+      margin: 0 0 7px;
+      padding-left: 16px;
+      line-height: 1.65;
+    }
+    .news li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #bbb;
+    }
 
     /* ── Research strip ──────────────────────────────── */
     .research-strip {
@@ -448,7 +465,7 @@
       <div class="bio-body">
         <h1 class="bio-name">Chengdong Fu</h1>
         <p class="bio-sub">Pronounce: cheng-dong&nbsp;&nbsp;·&nbsp;&nbsp;Email: <a href="mailto:fuchengdong1@outlook.com">fuchengdong1 [at] outlook.com</a></p>
-        <p>👋 Hello! I am a Research Engineer at <a href="https://zioneer.com/" target="_blank" rel="noopener">Zioneer</a>, where I'm fortunate to be advised by <a href="https://lrank.github.io/" target="_blank" rel="noopener">Yitong Li</a>. Previously, I received my B.S. and M.S. degrees from the <a href="https://www.sydney.edu.au/" target="_blank" rel="noopener">University of Sydney</a> (USYD).</p>
+        <p>👋 Hello! I am a Research Engineer at <a href="https://zioneer.com/" target="_blank" rel="noopener">Zioneer</a>, where I'm fortunate to be advised by <a href="https://lrank.github.io/" target="_blank" rel="noopener">Yitong Li</a>. Previously, I received my B.S. and M.S. degrees from the <a href="https://www.sydney.edu.au/" target="_blank" rel="noopener">University of Sydney</a> (USYD). Happy to chat for any research collaboration or opportunities!</p>
         <p class="social-links">
           <a href="mailto:fuchengdong1@outlook.com">Email</a>
           <a href="https://github.com/chengdongfu" target="_blank" rel="noopener">GitHub</a>
@@ -457,6 +474,13 @@
           <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
         </p>
       </div>
+    </section>
+
+    <section>
+      <div class="section-heading"><h2>News</h2></div>
+      <ul class="news">
+        <li>08/2026. I joined <a href="https://zioneer.com/" target="_blank" rel="noopener">Zioneer</a>. 🎉</li>
+      </ul>
     </section>
 
     <section>
