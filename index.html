@@ -118,6 +118,65 @@
     }
     .statement { padding: 4px 20px 0; }
     .statement p { margin: 0 0 13px; line-height: 1.7; }
+
+    .research-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      padding: 4px 20px 0;
+    }
+    .research-layout .statement {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 0;
+    }
+    .scene-card {
+      position: relative;
+      flex: 0 0 196px;
+      width: 196px;
+      display: block;
+      border: 1.5px solid rgba(0, 0, 0, .08);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #1a1612;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .scene-card:hover {
+      color: #fff;
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .1);
+    }
+    .scene-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .scene-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      background: #1a1612;
+    }
+    .scene-card-cta {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(17, 14, 10, .42);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+    }
+    .scene-card:hover .scene-card-cta,
+    .scene-card:focus-visible .scene-card-cta { opacity: 1; }
     .hl { color: var(--accent); }
     .section-note {
       margin: 0;
@@ -430,7 +489,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       .rs-track, .research-strip::before, .rs-dot { animation: none; }
-      #ditto-container, #ditto-container img { transition: none; }
+      #ditto-container, #ditto-container img, .scene-card, .scene-card-cta { transition: none; }
     }
 
     @media screen and (max-width: 768px) {
@@ -453,6 +512,12 @@
       .project { flex-direction: column; gap: 12px; padding: 16px; }
       .project-media { width: 100%; max-width: 420px; flex-basis: auto; }
       .research-strip { display: none; }
+      .research-layout {
+        flex-direction: column;
+        gap: 16px;
+        padding: 4px 16px 0;
+      }
+      .scene-card { width: min(220px, 100%); flex-basis: auto; }
     }
   </style>
 </head>
@@ -485,9 +550,15 @@
 
     <section>
       <div class="section-heading"><h2>Research</h2></div>
-      <div class="statement">
-        <p>My expertise lies in designing <span class="hl">controllable generative models</span> through semantic guidance and hierarchical control mechanisms, with a focus on modular, plug-and-play architectures.</p>
-        <p>I'm interested in bridging <span class="hl">visual understanding and controllable generation</span> in AI systems. Specifically, I wish to use computer vision and multi-modal learning algorithms to develop efficient personalization techniques for diffusion models, enabling rich, <span class="hl">fine-grained control</span> over user interactions for customized content creation experiences.</p>
+      <div class="research-layout">
+        <div class="statement">
+          <p>My expertise lies in designing <span class="hl">controllable generative models</span> through semantic guidance and hierarchical control mechanisms, with a focus on modular, plug-and-play architectures.</p>
+          <p>I'm interested in bridging <span class="hl">visual understanding and controllable generation</span> in AI systems. Specifically, I wish to use computer vision and multi-modal learning algorithms to develop efficient personalization techniques for diffusion models, enabling rich, <span class="hl">fine-grained control</span> over user interactions for customized content creation experiences.</p>
+        </div>
+        <a class="scene-card" href="explorer.html" aria-label="Explore the explorer's desk">
+          <img src="images/explorer-thumb.webp" alt="">
+          <span class="scene-card-cta">Explore</span>
+        </a>
       </div>
     </section>
 

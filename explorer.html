@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explorer's Desk — Chengdong Fu</title>
+  <meta name="author" content="Chengdong Fu">
+  <meta name="description" content="Explorer's Desk — pick up the instruments on the desk to read the projects behind them.">
+  <meta name="theme-color" content="#100e0c">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #980000;
+      --ink: #1c1c1c;
+      --link: #0A4EB3;
+      --link-hover: #f09228;
+      --muted: #555;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: #100e0c;
+      color: #f4efe8;
+      font-family: Lato, Verdana, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      overflow: hidden;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    #view {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      touch-action: none;
+      cursor: grab;
+    }
+    #view:active { cursor: grabbing; }
+
+    .vignette {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at center, transparent 42%, rgba(0, 0, 0, .45) 100%);
+      z-index: 1;
+    }
+
+    .top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 20px 10px;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(10, 8, 6, .72), rgba(10, 8, 6, 0));
+    }
+    .top a, .top p { pointer-events: auto; }
+    .back {
+      color: #f4efe8;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .back, .page-title, .instruction { text-shadow: 0 1px 2px rgba(0, 0, 0, .55); }
+    .back:hover { color: var(--link-hover); }
+    .back:focus-visible { outline: 2px solid #f4efe8; outline-offset: 3px; }
+    .brand { display: flex; flex-direction: column; gap: 2px; pointer-events: none; }
+    .brand a { pointer-events: auto; }
+    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -.01em; }
+    .instruction {
+      margin: 0;
+      max-width: 320px;
+      text-align: right;
+      font-size: 13px;
+      color: rgba(244, 239, 232, .94);
+      background: rgba(16, 14, 12, .62);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 999px;
+      padding: 6px 12px;
+    }
+
+    .chip {
+      position: fixed;
+      z-index: 6;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(20, 16, 12, .82);
+      color: #f4efe8;
+      font-size: 12px;
+      letter-spacing: .01em;
+      pointer-events: none;
+      transform: translate(-10%, -130%);
+      white-space: nowrap;
+    }
+
+    .panel {
+      --ac: var(--accent);
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 5;
+      width: min(390px, calc(100vw - 32px));
+      max-height: min(68vh, 540px);
+      overflow: auto;
+      padding: 16px 18px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .97);
+      color: var(--ink);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .32);
+      border-top: 3px solid var(--ac);
+      color-scheme: light;
+    }
+    .panel[hidden] { display: none; }
+    .obj-label {
+      margin: 0 0 4px;
+      font-family: Syne, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ac);
+    }
+    .panel h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      color: #111;
+    }
+    .lead {
+      margin: 0 0 8px;
+      font-size: 14.5px;
+      color: #222;
+    }
+    .abstract {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .year {
+      margin: 0 0 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 12px;
+      margin: 0;
+    }
+    .put {
+      border: 1.5px solid #e0e0e0;
+      border-radius: 20px;
+      background: #fff;
+      color: #333;
+      font: inherit;
+      font-size: 13px;
+      padding: 5px 14px;
+      cursor: pointer;
+    }
+    .put:hover { border-color: var(--accent); color: var(--accent); }
+    .put:focus-visible, .more:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .more { color: var(--link); font-size: 14px; text-decoration: none; }
+    .more:hover { color: var(--link-hover); }
+
+    #loading {
+      position: fixed;
+      inset: 0;
+      z-index: 8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: #100e0c;
+      color: #f4efe8;
+    }
+    #loading[hidden] { display: none; }
+    #loading p { margin: 0; font-size: 14px; letter-spacing: .02em; }
+    .bar {
+      width: min(240px, 60vw);
+      height: 2px;
+      background: rgba(255, 255, 255, .16);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    #bar-fill {
+      width: 0%;
+      height: 100%;
+      background: #f4efe8;
+    }
+
+    #still { display: none; }
+    body.fallback { background: #fff; color: var(--ink); overflow: auto; }
+    body.fallback .vignette,
+    body.fallback #view,
+    body.fallback .chip { display: none; }
+    body.fallback .top {
+      position: static;
+      background: none;
+      color: var(--ink);
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px 0;
+    }
+    body.fallback .back { color: var(--link); }
+    body.fallback .instruction { display: none; }
+    body.fallback #still {
+      display: block;
+      max-width: 980px;
+      margin: 8px auto 48px;
+      padding: 0 20px;
+    }
+    body.fallback #still img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      background: #14110e;
+    }
+    body.fallback #still p { color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 720px) {
+      .instruction {
+        position: fixed;
+        top: 62px;
+        left: 12px;
+        right: 12px;
+        max-width: none;
+        text-align: center;
+        font-size: 12px;
+      }
+      .panel {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        width: auto;
+        max-height: 46vh;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .panel { scroll-behavior: auto; }
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.181.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.181.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="view" aria-label="Explorer's desk. Drag to look around. Click an object to pick it up and read the project."></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">
+      <a class="back" href="index.html">← Chengdong Fu</a>
+      <strong class="page-title">Explorer's Desk</strong>
+    </div>
+    <p class="instruction">Drag to look around. Click an object to pick it up.</p>
+  </header>
+
+  <div id="chip" class="chip" hidden></div>
+
+  <aside id="panel" class="panel" hidden aria-live="polite">
+    <p class="obj-label" id="obj-label"></p>
+    <h2 id="proj-name"></h2>
+    <p class="lead" id="proj-lead"></p>
+    <p class="abstract" id="proj-abs"></p>
+    <p class="year" id="proj-year"></p>
+    <p class="actions">
+      <button class="put" id="put-back" type="button">Put back</button>
+      <a class="more" id="proj-link" href="index.html">Read the project</a>
+    </p>
+  </aside>
+
+  <div id="loading" role="status">
+    <p id="loading-label">Loading the desk…</p>
+    <div class="bar" aria-hidden="true"><div id="bar-fill"></div></div>
+  </div>
+
+  <figure id="still">
+    <img src="images/explorer.webp" alt="A lantern-lit explorer's desk: map, cameras, globe, compass, and magnifying glass">
+    <p>The interactive desk didn't load in this browser. This is the still from the same scene.</p>
+  </figure>
+
+  <noscript>
+    <p style="padding:24px">This page renders the desk in 3D. Enable JavaScript, or look at the still below.</p>
+    <img src="images/explorer.webp" alt="A lantern-lit explorer's desk">
+  </noscript>
+
+  <script type="module" src="explorer.js"></script>
+</body>
+</html>
